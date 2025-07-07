@@ -1,4 +1,4 @@
-/* إعدادات أساسية */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +44,7 @@ nav a:hover {
   color: #222;
 }
 
-/* ======= الصورة ======= */
+/* ======= Image ======= */
 .img img {
   width: 140px;
   height: 140px;
@@ -54,7 +54,7 @@ nav a:hover {
   margin: 20px 0;
 }
 
-/* ======= النبذة ======= */
+/* ======= Bio ======= */
 .bio {
   max-width: 800px;
   margin: 0 auto;
@@ -63,7 +63,7 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* ======= المهارات ======= */
+/* ======= Skills ======= */
 .skills {
   background-color: white;
   max-width: 800px;
@@ -148,7 +148,7 @@ footer {
   font-size: 1rem;
 }
 
-/* ======= استجابة للجوال ======= */
+/* ======= media ======= */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
