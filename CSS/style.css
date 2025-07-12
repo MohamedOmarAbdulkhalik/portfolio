@@ -10,7 +10,7 @@
   --nav-bg: #2d3e50;
   --nav-color: white;
   --section-bg: #ffffff;
-  --accent-color: #00bcd4;
+  --accent-color:#2d3e50;
   --footer-bg: #2d3e50;
 }
 
@@ -47,7 +47,8 @@ header {
   z-index: 2000;
   top: 0;
   left: 0;
-  background-color: #2d3e50;
+  background-color: var(--nav-bg);
+
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -227,7 +228,7 @@ header {
       font-size: 2.2rem;
       /* 35.2px */
       text-align: center;
-      color: #2d3e50;
+      color: var(--accent-color);
       margin-bottom: 1rem;
     }
 
@@ -243,7 +244,7 @@ header {
     }
 
     .work_samples h3 {
-      color: #2d3e50;
+      color: var(--accent-color);
       text-align: left;
       margin: 1rem 5rem 0.5rem;
       font-size: 1.7rem;
@@ -311,7 +312,7 @@ header {
       font-size: 2rem;
       text-align: center;
       margin-bottom: 2rem;
-      color: #2d3e50;
+      color: var(--accent-color)
     }
 
     .certificate {
@@ -331,6 +332,7 @@ header {
     .certificate p {
       font-size: 1rem;
       margin-left: 0.5rem;
+      color: var(--footer-bg);
     }
 
     .testimonials {
@@ -346,7 +348,7 @@ header {
       font-size: 2rem;
       text-align: center;
       margin-bottom: 2rem;
-      color: #2d3e50;
+      color: var(--accent-color);
     }
 
     .testimonial {
