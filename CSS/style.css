@@ -174,7 +174,6 @@
     .img img {
       width: 100%;
       max-width: 180px;
-      /* الحد الأقصى للحجم */
       height: auto;
       border-radius: 50%;
       object-fit: cover;
@@ -271,7 +270,7 @@
       }
 
       .img img {
-        margin-top: 20rem;
+        margin-top: 4rem;
       }
     }
 
