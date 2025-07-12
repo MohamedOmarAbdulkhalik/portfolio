@@ -56,6 +56,48 @@
       });
     });
   });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const darkToggle = document.getElementById('dark-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // تحقق من التفضيل المحفوظ
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      darkToggle.textContent = '☀️'; // تغيير الأيقونة إلى شمس
+    } else if (currentTheme === 'light') {
+      document.body.setAttribute('data-theme', 'light');
+      darkToggle.textContent = '🌙';
+    }
+    
+    // تتبع تغيير تفضيلات النظام
+    prefersDarkScheme.addListener(e => {
+      if (e.matches) {
+        document.body.setAttribute('data-theme', 'dark');
+        darkToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.setAttribute('data-theme', 'light');
+        darkToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // حدث النقر على الزر
+    darkToggle.addEventListener('click', function() {
+      const currentTheme = document.body.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.body.setAttribute('data-theme', 'light');
+        darkToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.setAttribute('data-theme', 'dark');
+        darkToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  });
 </script>
 <body id="top">
 
@@ -72,7 +114,7 @@
       </ul>
 
       <!-- زر الوضع الداكن -->
-      <label for="dark-toggle" class="dark-toggle-label" aria-label="Toggle dark mode">🌙</label>
+<button id="dark-toggle" class="dark-toggle-label" aria-label="Toggle dark mode">🌙</button>
     </div>
   </nav>
           <div class="img">
