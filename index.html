@@ -8,6 +8,55 @@
     <title>Document</title>
 </head>
 
+
+      <!-- Sidebar Navigation -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <span class="close-sidebar">&times;</span>
+  </div>
+  <ul class="sidebar-menu">
+    <li>Bio</li>
+    <li>Skills</li>
+    <li>Portfolio</li>
+    <li>Contact</li>
+  </ul>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger-icon');
+    const sidebar = document.querySelector('.sidebar');
+    const closeSidebar = document.querySelector('.close-sidebar');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+
+    // Toggle sidebar
+    hamburger.addEventListener('click', function() {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    // Close sidebar
+    closeSidebar.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Close when clicking overlay
+    overlay.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Close when clicking a menu item
+    document.querySelectorAll('.sidebar-menu li').forEach(item => {
+      item.addEventListener('click', function() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  });
+</script>
 <body id="top">
 
 
@@ -23,7 +72,6 @@
       </ul>
 
       <!-- زر الوضع الداكن -->
-      <input type="checkbox" id="dark-toggle" class="dark-toggle" />
       <label for="dark-toggle" class="dark-toggle-label" aria-label="Toggle dark mode">🌙</label>
     </div>
   </nav>
