@@ -1,233 +1,147 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f9fc;
-  color: #333;
-  padding: 0 15px;
-}
+    header {
+      background-color: #2d3e50;
+      color: white;
 
-/* ======= Header ======= */
-header {
-  background: linear-gradient(to right, #00bcd4, #ffc107);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
+      text-align: center;
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  list-style: none;
-  margin-bottom: 20px;
-}
+    }
 
+    nav {
+      background-color: #2d3e50;
+      color: white;
+      position: fixed;
+      padding: 1.5rem 1rem;
+      display: block;
+      width: -webkit-fill-available;
 
-nav a,#contact_me {
-  text-decoration: none;
+    }
 
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
 
-nav a:hover {
-  color: #222;
-}
+    nav li {
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 1.5rem;
+    }
 
-/* ======= Image ======= */
-.img img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 4px solid white;
-  object-fit: cover;
-  margin: 20px 0;
-}
+    nav li:hover {
+      color: #00bcd4;
+    }
 
-/* ======= Bio ======= */
-.bio {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 15px;
-  border-radius: 10px;
-}
+    .img img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bcd4;
+      margin-top: 7rem;
+    }
 
-/* ======= Skills ======= */
-.skills {
-  background-color: white;
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    .bio p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1.5rem;
+      padding: 3rem;
+    }
 
-.skills h1 {
-  color: #00bcd4;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
+    main {
+      padding: 2rem 1rem;
+    }
 
-.skills ul {
-  list-style: disc inside;
-}
+    .skills,
+    .work_samples {
+      margin-bottom: 3rem;
+    }
 
-.skills li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
+    h2 {
+      text-align: center;
+      color: #2d3e50;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
 
-.skills li:last-child {
-  border-bottom: none;
-}
+    .skills ul {
+      max-width: 800px;
+      margin: auto;
+      padding-left: 1rem;
+      list-style: disc;
+    }
 
-/* ======= Portfolio ======= */
-.work_samples {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
-}
+    li {
+      font-size: 1.3rem;
+    }
 
-.work_samples h1 {
-  color: #00bcd4;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
+    .work_samples h3 {
+      color: #2d3e50;
+      text-align: left;
+      margin: 1rem 5rem 0.5rem;
+      font-size: 1.7rem;
+    }
 
-.project {
-  margin-bottom: 40px;
-}
+    .pics {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
 
-.project h2 {
-  margin-bottom: 10px;
-  border-left: 5px solid #00bcd4;
-  padding-left: 10px;
-  font-size: 1.4rem;
-  color: #333;
-}
+    .pics img {
+      width: 370px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
 
-.pics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+    .pics img:hover {
+      transform: scale(2);
+    }
 
-.pics img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    footer {
+      background-color: #2d3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
 
-.pics img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
+    footer p {
+      margin: 0.3rem 0;
+    }
 
-/* ======= Footer ======= */
-footer {
-  background-color: #00bcd4;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  font-size: 1rem;
-}
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-/* ======= media ======= */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
+      .pics img {
+        width: 90%;
+      }
 
-  .pics {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pics img {
-    max-width: 90%;
-  }
-}
-
-
-
-/* ===== Certificates & Testimonials ===== */
-.certificates, .testimonials {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.certificates h1, .testimonials h1 {
-  color: #00bcd4;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.certificates ul {
-  list-style: square inside;
-  padding-left: 10px;
-}
-
-.testimonial {
-  background: #f4f9fc;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-left: 4px solid #00bcd4;
-  border-radius: 5px;
-}
-
-/* ===== CV Button ===== */
-.download-cv {
-  background-color: #00bcd4;
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.download-cv:hover {
-  background-color: #0097a7;
-}
-
-/* ===== Scroll to Top Button ===== */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-  background-color: #00bcd4;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-#scrollTopBtn:hover {
-  background-color: #0097a7;
-}
+      .img img {
+        margin-top: 20rem;
+      }
+    }
